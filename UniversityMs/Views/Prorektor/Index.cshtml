@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="content-wrap ">
+    <!-- Page title-->
+    <div class="pt-120 pb-130">
+        <div class="container">
+            <div class="row gy-60 align-items-center">
+                <div class="col-12 col-lg-6">
+                    <div class="gallery-wrapper pe-lg-70" data-show="startbox">
+                        <!-- Image-->
+                        <!-- Gallery item--><a class="gallery-item rounded-4 overflow-hidden"
+                                               href="assets/img/service-1-900x990.jpg" style="--img-height: 110%;"
+                                               data-img-height><img loading="lazy" src="assets/img/prorektor.jpg" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    @foreach (var prorektor in Model.Prorektorlar)
+                    {
+                    <div class="summary">
+                        <h3 class="mb-45" data-show="startbox">
+                            
+                            @prorektor.Title
+                        </h3>
+                        <p class="mb-60" data-show="startbox" data-show-delay="100">
+                           @prorektor.Content
+                        </p>
+                    </div>
+                    }
+                <div class="row gy-40">
+                    <!-- Item-->
+                    @foreach (var prorektor in Model.Prorektorlar)
+                    {
+                        <div class="col-12 col-lg-6" data-show="startbox">
+                            <ul class="list fw-medium font-size-15">
+                                <li class="active">
+                                    @prorektor.Position
+                                </li>
+                            </ul>
+                        </div>
+                    }
+                    </div>
+                </div>
+                    <div class="mt-45" data-show="startbox">
+                        <!-- Button--><a class="btn btn-accent-1 btn-link btn-clean"
+                                         href="http://bsu.edu.az/az/content/mmmdov_hseyn_mikayl_olu" target="_self">
+                            Learn
+                            more
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

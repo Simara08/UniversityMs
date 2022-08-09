@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20220724155634_FexriMezunlarTable.cs" />
+    <Compile Remove="Migrations\20220724155634_FexriMezunlarTable.Designer.cs" />
+    <Compile Remove="Migrations\20220724161036_FexriMezunlarTable.cs" />
+    <Compile Remove="Migrations\20220724161036_FexriMezunlarTable.Designer.cs" />
+    <Compile Remove="Migrations\20220724193733_RektorPage.cs" />
+    <Compile Remove="Migrations\20220724193733_RektorPage.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.27" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.27" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.27" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.27">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\admin\assets\fonts\DMSans-Medium.woff2" />
+    <None Include="wwwroot\admin\assets\fonts\DMSans-Regular.woff2" />
+    <None Include="wwwroot\admin\assets\js\bundle.js" />
+    <None Include="wwwroot\admin\assets\js\charts\chart-lms.js" />
+    <None Include="wwwroot\admin\assets\js\demo-settings.js" />
+    <None Include="wwwroot\admin\assets\js\scripts.js" />
+    <None Include="wwwroot\assets\vendors\node_modules\dom7\dom7.esm.js" />
+    <None Include="wwwroot\assets\vendors\node_modules\ssr-window\ssr-window.esm.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\UniversityMsAdmin\Data\" />
+    <Folder Include="Areas\UniversityMsAdmin\Models\" />
+  </ItemGroup>
+
+</Project>

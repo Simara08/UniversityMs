@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="content-wrap " style="padding-top: 40px;">
+    <!-- Page title-->
+    <!-- Portfolio section-->
+    <div class="news" style="padding: 30px;">
+        @foreach (var news in Model.Newspages)
+        {
+            <div class="col-lg-4 offset-lg-4 text-center">
+                <h2 class="m-0" data-show="startbox" data-show-delay="100">
+                    @news.Title
+                </h2>
+            </div>
+        }
+        <div class="py-130 footerPrev" style="padding-bottom: 381.75px !important;">
+            <div class="container">
+                <!-- Isotope-->
+                <div class="isotope">
+                    <div class="row isotope-grid gy-60" style="position: relative; height: 1858.83px;">
+                        @foreach (var news in Model.Newspages)
+                        {
+                            <div class=" isotope-item col-12" data-filters="architecture"
+                                 style="position: absolute; left: 0px; top: 0px;">
+                                <!-- Portfolio-->
+                                <div class="card card-portfolio  card-hover-zoom card-horizontal">
+                                    <a class="card-img rounded-4 overflow-hidden" href="project-single-01.html"
+                                       data-img-height="" style="--img-height: 86%;">
+                                        <img loading="lazy"
+                                             src="assets/img/@news.Image" alt="">
+                                    </a>
+                                    <div class="card-body">
+                                        <h4 class="service-case-title mb-15">
+                                           @news.Newstitle
+                                        </h4>
+                                        <p class="service-case-text font-size-15 mb-30">
+                                            <b>
+                                               @news.Desc
+                                            </b>
+                                        </p>
+                                        <p class="card-text">
+                                           @news.Content
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
