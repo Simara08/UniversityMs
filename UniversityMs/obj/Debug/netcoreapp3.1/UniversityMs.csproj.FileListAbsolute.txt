@@ -166,5 +166,7 @@ C:\Users\simar\source\repos\UniversityMs\UniversityMs\obj\Debug\netcoreapp3.1\Un
 C:\Users\simar\source\repos\UniversityMs\UniversityMs\obj\Debug\netcoreapp3.1\UniversityMs.dll
 C:\Users\simar\source\repos\UniversityMs\UniversityMs\obj\Debug\netcoreapp3.1\UniversityMs.pdb
 C:\Users\simar\source\repos\UniversityMs\UniversityMs\obj\Debug\netcoreapp3.1\UniversityMs.genruntimeconfig.cache
-C:\Users\simar\source\repos\UniversityMs\UniversityMs\obj\Debug\netcoreapp3.1\UniversityMs.csproj.AssemblyReference.cache
 C:\Users\simar\source\repos\UniversityMs\UniversityMs\obj\Debug\netcoreapp3.1\Razor\Areas\UniversityMsAdmin\Views\Slide\Create.cshtml.g.cs
+C:\Users\simar\source\repos\UniversityMs\UniversityMs\obj\Debug\netcoreapp3.1\UniversityMs.csproj.AssemblyReference.cache
+C:\Users\simar\source\repos\UniversityMs\UniversityMs\obj\Debug\netcoreapp3.1\Razor\Areas\UniversityMsAdmin\Views\Slide\Update.cshtml.g.cs
+C:\Users\simar\source\repos\UniversityMs\UniversityMs\obj\Debug\netcoreapp3.1\Razor\Areas\UniversityMsAdmin\Views\Slide\Delete.cshtml.g.cs

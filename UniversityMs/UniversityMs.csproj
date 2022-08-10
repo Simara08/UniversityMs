@@ -37,7 +37,6 @@
 
   <ItemGroup>
     <Folder Include="Areas\UniversityMsAdmin\Data\" />
-    <Folder Include="Areas\UniversityMsAdmin\Models\" />
   </ItemGroup>
 
 </Project>
