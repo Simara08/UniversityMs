@@ -2,57 +2,47 @@
     ViewData["Title"] = "Index";
 }
 
-<div class="content-wrap ">
-    <!-- Page title-->
-    <div class="pt-120 pb-130">
-        <div class="container">
-           
-            <div class="row gy-60 align-items-center">
-                <div class="col-12 col-lg-6 ">
+<div class="pt-120 pb-100 shape-parent overflow-hidden">
+    <!-- Shape-->
+    <div class="shape justify-content-end">
+        <img loading="lazy" src="~/assets/img/root/home-3-shape-1-536x706.png"
+             alt="" width="536" height="706">
+    </div>
+    <div class="container">
+        @foreach (var grad in Model.Rektorlar)
+        {
+            <div class="row align-items-center gy-90">
+                <div class="col-lg-6">
 
-                    <div class="gallery-wrapper pe-lg-70" data-show="startbox">
-                        <a class="gallery-item rounded-4 overflow-hidden"
-                           href="assets/img/service-1-900x990.jpg" style="--img-height: 110%;"
-                           data-img-height><img loading="lazy" src="assets/img/rektor.jpg" alt=""></a>
-
-
+                    <div class="pe-lg-70">
+                        <h2 class="mb-45" data-show="startbox" data-show-delay="100">
+                            <span class="highlight">@grad.Title</span>
+                        </h2>
+                        <p class="mb-50" data-show="startbox" data-show-delay="300">
+                            @grad.Content
+                        </p>
+                        <div data-show="startbox" data-show-delay="400">
+                            <!-- Button--><a class="btn btn-accent-1 btn-link btn-clean" href="@grad.Wikilink"
+                                             target="_self">Learn more</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-6">
-                    @foreach (var rektor in Model.Rektorlar)
-                    {
-                        <div class="summary">
-                            <h3 class="mb-45" data-show="startbox">@rektor.Title</h3>
-                            <p class="mb-60" data-show="startbox" data-show-delay="100">
-                                @rektor.Content
-                            </p>
+                <div class="col-lg-6 pb-75">
+                    <div class="ms-70 shape-parent">
+                        <div data-img-height style="--img-height: 100%;" data-show="startbox">
+                            <img class="rounded-4"
+                                 loading="lazy" src="~/assets/img/@grad.Image" alt="">
                         </div>
-                    }
-                    <div class="row gy-40">
-                        <!-- Item-->
-                        @foreach (var rektor in Model.Rektorlar)
-                        {
-                            <div class="col-12 col-lg-6" data-show="startbox">
-                                <ul class="list fw-medium font-size-15">
-                                    <li class="active">@rektor.Position</li>
-                                </ul>
-                            </div>
-                        }
                     </div>
-                        <div class="mt-45" data-show="startbox">
-                            <!-- Button--><a class="btn btn-accent-1 btn-link btn-clean"
-                                             href="https://az.wikipedia.org/wiki/El%C3%A7in_Babayev" target="_self">
-                                Learn
-                                more
-                            </a>
+                    <div class="rounded-4 overflow-hidden shape-parent text-center d-inline-flex position-absolute mt-n75">
+                        <div class="background">
+                            <div class="background-color" style="--background-color: #481FA0;"></div>
                         </div>
-                    
-
-                </div>
-
+                    </div>
                 </div>
             </div>
+
+        }
     </div>
 </div>
-
 

@@ -1,0 +1,44 @@
+﻿@model UniversityMs.Models.Prorektorpage
+
+@{
+    ViewData["Title"] = "Update";
+}
+<div class="row" style="margin:80px;">
+    <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Update Prorektor</h4>
+                <form class="forms-sample" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label asp-for="Photo">Prorektor Image</label>
+                        <div class="input-group col-xs-12">
+                            <input asp-for="Photo" class="form-control file-upload-info" placeholder="Upload Image">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Title">Prorektor Title</label>
+                        <input class="form-control" asp-for="Title" placeholder=" Title">
+                        <span asp-validation-for="Title" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Content">Prorektor Content</label>
+                        <input class="form-control" asp-for="Content" placeholder="Page Content">
+                        <span asp-validation-for="Content" class="text-danger"></span>
+                    </div> <div class="form-group">
+                        <label asp-for="Wikilink">Prorektor Wikipedia Link</label>
+                        <input class="form-control" asp-for="Wikilink" placeholder="Wikipedia Link">
+                        <span asp-validation-for="Wikilink" class="text-danger"></span>
+                    </div>
+                    <button type="submit" value="Create" class="btn btn-primary">Update</button>
+                    <a class="btn btn-light" asp-action="Index">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.4/jquery.validate.min.js" integrity="sha512-FOhq9HThdn7ltbK8abmGn60A/EMtEzIzv1rvuh+DqzJtSGq8BRdEN0U+j0iKEIffiw/yEtVuladk6rsG4X6Uqg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js" integrity="sha512-o6XqxgrUsKmchwy9G5VRNWSSxTS4Urr4loO6/0hYdpWmFUfHqGzawGxeQGMDqYzxjY9sbktPbNlkIQJWagVZQg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+

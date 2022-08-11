@@ -8,7 +8,7 @@
     <meta name="description"
           content="A powerful and conceptual apps base dashboard template that especially build for developers and programmers.">
     <link rel="shortcut icon" href="~/admin/images/favicon.png">
-    <title>Dashboard | LMS | DashLite Admin Template</title>
+    <title>University  Management  System </title>
     <link rel="stylesheet" href="~/admin/assets/css/dashlite.css">
     <link id="skin-default" rel="stylesheet" href="~/admin/assets/css/theme.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-91615293-4"></script>
@@ -29,8 +29,8 @@
             <div class="nk-sidebar nk-sidebar-fixed is-light " data-content="sidebarMenu">
                 <div class="nk-sidebar-element nk-sidebar-head">
                     <div class="nk-sidebar-brand">
-                        <a href="/demo2/index.html" class="logo-link nk-sidebar-logo" style="text-align:center;">
-                            <b>University  <p>Management  System </p></b>
+                        <a asp-area="UniversityMsAdmin" asp-controller="Dashboard" asp-action="Index" class="logo-link nk-sidebar-logo" style="text-align:center;">
+                            <b>University</b>  <p><b>Management  System</b> </p>
                         </a>
                     </div>
                     <div class="nk-menu-trigger me-n2">
@@ -45,7 +45,7 @@
                         <div class="nk-sidebar-menu" data-simplebar>
                             <ul class="nk-menu">
                                 <li class="nk-menu-item">
-                                    <a href="/demo2/lms/index.html" class="nk-menu-link">
+                                    <a asp-area="UniversityMsAdmin" asp-controller="Dashboard" asp-action="Index" class="nk-menu-link">
                                         <span class="nk-menu-icon"><em class="icon ni ni-dashboard-fill"></em></span><span class="nk-menu-text">Dashboard</span>
                                     </a>
                                 </li>
@@ -125,10 +125,58 @@
                                             </a>
                                         </li>
                                         <li class="nk-menu-item">
-                                            <a asp-area="UniversityMsAdmin" asp-controller="Partner" asp-action="Index"
+                                            <a asp-area="UniversityMsAdmin" asp-controller="Mezun" asp-action="Index"
                                                class="nk-menu-link">
                                                 <span class="nk-menu-text">
-                                                    Home-Partner
+                                                    Home-HGraduate
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="nk-menu-item">
+                                            <a asp-area="UniversityMsAdmin" asp-controller="RektorPage" asp-action="Index"
+                                               class="nk-menu-link">
+                                                <span class="nk-menu-text">
+                                                    Rektor-page
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="nk-menu-item">
+                                            <a asp-area="UniversityMsAdmin" asp-controller="Prorektorpage" asp-action="Index"
+                                               class="nk-menu-link">
+                                                <span class="nk-menu-text">
+                                                    Prorektor-page
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="nk-menu-item">
+                                            <a asp-area="UniversityMsAdmin" asp-controller="Elmishurapage" asp-action="Index"
+                                               class="nk-menu-link">
+                                                <span class="nk-menu-text">
+                                                    Elmişura-page
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="nk-menu-item">
+                                            <a asp-area="UniversityMsAdmin" asp-controller="Newspage" asp-action="Index"
+                                               class="nk-menu-link">
+                                                <span class="nk-menu-text">
+                                                    News-page
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="nk-menu-item">
+                                            <a asp-area="UniversityMsAdmin" asp-controller="Aboutpage" asp-action="Index"
+                                               class="nk-menu-link">
+                                                <span class="nk-menu-text">
+                                                    About-page
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="nk-menu-item">
+                                            <a asp-area="UniversityMsAdmin" asp-controller="Googlemaps" asp-action="Index"
+                                               class="nk-menu-link">
+                                                <span class="nk-menu-text">
+                                                    About-Googlemap
                                                 </span>
                                             </a>
                                         </li>
