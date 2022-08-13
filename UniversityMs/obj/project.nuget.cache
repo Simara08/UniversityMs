@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "lMNkIcfXjnjjTkT23rfCPjxUpT8NQid5Xe2Ldt+mNyYmP657+UVQ9W16zh9VF5gC8YmmCZKu8KKjcUNyJyYmNw==",
+  "dgSpecHash": "ZgUOq/7OC/PUAQHOj5EBpQBXe+RcNEAvBomnInKbgj9v3UqPxLpICp65T4QtWqVL2kXeIHKOu8TMpxO7CdhuNA==",
   "success": true,
   "projectFilePath": "C:\\Users\\simar\\source\\repos\\UniversityMs\\UniversityMs\\UniversityMs.csproj",
   "expectedPackageFiles": [
@@ -24,10 +24,10 @@
     "C:\\Users\\simar\\.nuget\\packages\\microsoft.entityframeworkcore\\3.1.27\\microsoft.entityframeworkcore.3.1.27.nupkg.sha512",
     "C:\\Users\\simar\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\3.1.27\\microsoft.entityframeworkcore.abstractions.3.1.27.nupkg.sha512",
     "C:\\Users\\simar\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\3.1.27\\microsoft.entityframeworkcore.analyzers.3.1.27.nupkg.sha512",
-    "C:\\Users\\simar\\.nuget\\packages\\microsoft.entityframeworkcore.design\\3.1.25\\microsoft.entityframeworkcore.design.3.1.25.nupkg.sha512",
+    "C:\\Users\\simar\\.nuget\\packages\\microsoft.entityframeworkcore.design\\3.1.27\\microsoft.entityframeworkcore.design.3.1.27.nupkg.sha512",
     "C:\\Users\\simar\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\3.1.27\\microsoft.entityframeworkcore.relational.3.1.27.nupkg.sha512",
     "C:\\Users\\simar\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\3.1.25\\microsoft.entityframeworkcore.sqlserver.3.1.25.nupkg.sha512",
-    "C:\\Users\\simar\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\3.1.25\\microsoft.entityframeworkcore.tools.3.1.25.nupkg.sha512",
+    "C:\\Users\\simar\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\3.1.27\\microsoft.entityframeworkcore.tools.3.1.27.nupkg.sha512",
     "C:\\Users\\simar\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\3.1.27\\microsoft.extensions.caching.abstractions.3.1.27.nupkg.sha512",
     "C:\\Users\\simar\\.nuget\\packages\\microsoft.extensions.caching.memory\\3.1.27\\microsoft.extensions.caching.memory.3.1.27.nupkg.sha512",
     "C:\\Users\\simar\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.27\\microsoft.extensions.configuration.3.1.27.nupkg.sha512",

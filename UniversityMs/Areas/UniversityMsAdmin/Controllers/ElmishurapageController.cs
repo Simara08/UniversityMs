@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -14,6 +15,7 @@ using Elmishurapage = UniversityMs.Models.Elmishurapage;
 
 namespace UniversityMs.Areas.UniversityMsAdmin.Controllers
 {
+    [Authorize]
     [Area("UniversityMsAdmin")]
     public class ElmishurapageController : Controller
     {

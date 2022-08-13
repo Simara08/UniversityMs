@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -11,6 +12,7 @@ using UniversityMs.Models;
 
 namespace UniversityMs.Areas.UniversityMsAdmin.Controllers
 {
+    [Authorize]
     [Area("UniversityMsAdmin")]
     public class SlideController : Controller
     {

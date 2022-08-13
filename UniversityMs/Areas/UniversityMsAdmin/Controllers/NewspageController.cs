@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -14,7 +15,8 @@ using Newspage = UniversityMs.Models.Newspage;
 
 namespace UniversityMs.Areas.UniversityMsAdmin.Controllers
 {
-        [Area("UniversityMsAdmin")]
+    [Authorize]
+    [Area("UniversityMsAdmin")]
         public class NewspageController : Controller
         {
             private AppDbContext _context { get; }
