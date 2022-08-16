@@ -13,9 +13,22 @@ namespace UniversityMs.Models
         public string ProfileImage { get; set; }    
         public string PhoneNum { get; set; }    
         public string Adress { get; set; }    
-        public DateTime DateofBirth { get; set; }    
-        public bool IsActivated { get; set; }
+        public DateTime DateofBirth { get; set; }  
+        public bool IsDaleted { get; set; }
+        public int DocLogsId { get; set; }
+        public int ClassId { get; set; }
+        public int TranskriptId { get; set; }
+        public DocLogs DocLogs { get; set; }
+        public Class Class { get; set; }
+        public DocTranskript Transkript { get; set; }
         public ICollection<UserExam> UserExam { get; set; }
         public ICollection<DepUser> DepUsers { get; set; }
+        public ICollection<UserSectionCourseStruc> UserSectionCourseStruc { get; set; }
+        public ICollection<UserQuiz> UserQuize { get; set; }
+        public ICollection<Grade> Grade { get; set; }
+        public ICollection<RTopicUser> RTopicUser { get; set; }
+        public ICollection<RProjectUser> RProjectUser { get; set; }
+        public ICollection<ProjectUser> ProjectUser { get; set; }
+        public ICollection<AssigmentUser> AssigmentUser { get; set; }
     }
 }

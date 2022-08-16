@@ -1,4 +1,4 @@
-﻿using AnimaLove.Helpers;
+﻿using UniversityMs.Helpers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;

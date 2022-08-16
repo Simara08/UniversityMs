@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AnimaLove.Helpers
+namespace UniversityMs.Helpers
 {
     public  static class Role
     {

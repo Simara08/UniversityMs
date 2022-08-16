@@ -13,5 +13,8 @@ namespace UniversityMs.Models
         public int Mark { get; set; }
         public int ClassId { get; set; }
         public Class Class { get; set; }
+        public bool IsDaleted { get; set; }
+        public ICollection<UserQuiz> UserQuize { get; set; }
+        public ICollection<CourseQuiz> CourseQuiz { get; set; }
     }
 }

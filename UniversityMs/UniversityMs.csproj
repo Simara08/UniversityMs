@@ -13,6 +13,14 @@
     <Compile Remove="Migrations\20220724193733_RektorPage.Designer.cs" />
     <Compile Remove="Migrations\20220810064252_first.cs" />
     <Compile Remove="Migrations\20220810064252_first.Designer.cs" />
+    <Compile Remove="Migrations\20220815144211_MyUniversity.cs" />
+    <Compile Remove="Migrations\20220815144211_MyUniversity.Designer.cs" />
+    <Compile Remove="Migrations\20220815154651_course.cs" />
+    <Compile Remove="Migrations\20220815154651_course.Designer.cs" />
+    <Compile Remove="Migrations\20220815200743_DocLogs.cs" />
+    <Compile Remove="Migrations\20220815200743_DocLogs.Designer.cs" />
+    <Compile Remove="Migrations\20220815201417_DocLogs.cs" />
+    <Compile Remove="Migrations\20220815201417_DocLogs.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -39,7 +47,6 @@
 
   <ItemGroup>
     <Folder Include="Areas\UniversityMsAdmin\Data\" />
-    <Folder Include="Views\Accounts\" />
   </ItemGroup>
 
 </Project>

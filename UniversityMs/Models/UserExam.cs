@@ -7,6 +7,7 @@ namespace UniversityMs.Models
 {
     public class UserExam
     {
+        public int Id { get; set; }
         public int AppUserId { get; set; }
         public int ExamId { get; set; }
         public AppUser User { get; set; }

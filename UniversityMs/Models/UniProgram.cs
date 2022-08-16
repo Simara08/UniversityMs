@@ -5,11 +5,13 @@ using System.Threading.Tasks;
 
 namespace UniversityMs.Models
 {
-    public class Program
+    public class UniProgram
     {
         public int Id { get; set; }
         public string Type { get; set; }
-        public Sem_Offering SemOffering { get; set; }
+        public SemOffering SemOffering { get; set; }
+        public bool IsDaleted { get; set; }
         public ICollection<DepUser> DepUsers { get; set; }
+        public ICollection<Depfaculty> Depafulty { get; set; }
     }
 }

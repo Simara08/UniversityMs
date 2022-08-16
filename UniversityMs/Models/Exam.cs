@@ -11,8 +11,11 @@ namespace UniversityMs.Models
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
         public int Mark { get; set; }
+        public bool IsDaleted { get; set; }
         public int ClassId { get; set; }
         public Class Class { get; set; }
         public ICollection<UserExam>UserExam { get; set; }
+        public ICollection<ExamCourseStruc> ExamCourseStruc { get; set; }
+        public ICollection<ExamPaper> ExamPaper { get; set; }
     }
 }

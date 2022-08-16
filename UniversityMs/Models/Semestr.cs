@@ -9,6 +9,8 @@ namespace UniversityMs.Models
     {
         public int Id { get; set; }
         public int SemestrNum { get; set; }
-        public Sem_Offering SemOffering { get; set; }
+        public int SemOfferingId { get; set; }
+        public SemOffering SemOffering { get; set; }
+        public bool IsDaleted { get; set; }
     }
 }

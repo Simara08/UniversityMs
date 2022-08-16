@@ -7,6 +7,7 @@ namespace UniversityMs.Models
 {
     public class CourseDep
     {
+        public int Id { get; set; }
         public int CourseId { get; set; }
         public int DepId { get; set; }
         public Department Department { get; set; }

@@ -5,15 +5,13 @@ using System.Threading.Tasks;
 
 namespace UniversityMs.Models
 {
-    public class Sem_Offering
+    public class Topic
     {
         public int Id { get; set; }
-        public int Year { get; set; }
+        public string Name { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
-        public Semestr Semestr { get; set; }
-        public Department Department { get; set; }
-        public Program Program { get; set; }
-
+        public bool IsDaleted { get; set; }
+        public ICollection<CourseTopic> CourseTopic { get; set; }
     }
 }

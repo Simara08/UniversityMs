@@ -9,10 +9,11 @@ namespace UniversityMs.Models
 {
     public class Depfaculty
     {
-        [Key, Column(Order = 1)]
+        public int Id { get; set; }
         public int FacultyId { get; set; }
-        [Key, Column(Order = 2)]
         public int DepartmentId { get; set; }
+        public int UniProgramId { get; set; }
+        public UniProgram UniProgram { get; set; }
         public Faculty Faculty { get; set; }
         public Department Department { get; set; }
     }

@@ -1,5 +1,5 @@
 ﻿
-using AnimaLove.Helpers;
+using UniversityMs.Helpers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -10,14 +10,14 @@ using System.Threading.Tasks;
 using UniversityMs.Models;
 using UniversityMs.ViewModels;
 
-namespace AnimaLove.Controllers
+namespace UniversityMs.Areas.UniversityMsAdmin.Controllers
 {
     public class Account : Controller
     {
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
         private readonly RoleManager<IdentityRole> _roleManager;
-        
+
 
         public Account(UserManager<AppUser> userManager,
                                       SignInManager<AppUser> signInManager,
@@ -41,14 +41,15 @@ namespace AnimaLove.Controllers
             {
                 return View(model);
             }
+
             AppUser NewUser = new AppUser
             {
-                Email = model.Email,
+                FirstName = model.FirstName,
                 LastName = model.LastName,
-                FirstName =model.FirstName,
+                Email = model.Email,
             };
-            var IdentityResult =  await _userManager.CreateAsync(NewUser, model.Password);
-            
+            var IdentityResult = await _userManager.CreateAsync(NewUser, model.Password);
+
             if (!IdentityResult.Succeeded)
             {
                 foreach (var error in IdentityResult.Errors)
@@ -58,12 +59,11 @@ namespace AnimaLove.Controllers
                 return View(model);
             }
             await _userManager.AddToRoleAsync(NewUser, Role.RoleType.Admin.ToString());
-           await _signInManager.SignInAsync(NewUser, true);
-            return RedirectToAction("Index","Home");
+            await _signInManager.SignInAsync(NewUser, true);
+            return RedirectToAction("Index", "Home");
 
         }
-        [HttpGet]
-        [AllowAnonymous]
+        [HttpPost]
         public IActionResult Login()
         {
             return View();
@@ -72,17 +72,18 @@ namespace AnimaLove.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> Login(LoginVM model)
         {
-           AppUser DbUser= await _userManager.FindByEmailAsync(model.Email);
-            if (DbUser==null)   
+            AppUser DbUser = await _userManager.FindByEmailAsync(model.Email);
+            if (DbUser == null)
             {
                 ModelState.AddModelError("", "Email or password is wrong!");
                 return View(model);
             }
-            AppUser newModel = new AppUser {
+            AppUser newModel = new AppUser
+            {
                 Email = model.Email
             };
             var signInResult =
-                 await _signInManager.PasswordSignInAsync(DbUser.Email, model.Password, model.isPersistent,lockoutOnFailure: true);
+                 await _signInManager.PasswordSignInAsync(DbUser.UserName, model.Password, model.isPersistent, lockoutOnFailure: true);
             if (signInResult.IsLockedOut)
             {
                 ModelState.AddModelError("", "Prease try again later!");
@@ -111,9 +112,9 @@ namespace AnimaLove.Controllers
         //        {
         //            await _roleManager.CreateAsync(new IdentityRole { Name = role.ToString() });
         //        }
-              
+
         //    }
-            
+
         //}
 
     }
