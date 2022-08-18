@@ -210,3 +210,6 @@ C:\Users\simar\source\repos\UniversityMs\UniversityMs\obj\Debug\netcoreapp3.1\Ra
 C:\Users\simar\source\repos\UniversityMs\UniversityMs\obj\Debug\netcoreapp3.1\Razor\Areas\UniversityMsAdmin\Views\Googlemaps\Edit.cshtml.g.cs
 C:\Users\simar\source\repos\UniversityMs\UniversityMs\obj\Debug\netcoreapp3.1\Razor\Areas\UniversityMsAdmin\Views\Googlemaps\Index.cshtml.g.cs
 C:\Users\simar\source\repos\UniversityMs\UniversityMs\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\simar\source\repos\UniversityMs\UniversityMs\obj\Debug\netcoreapp3.1\Razor\Areas\UniversityMsAdmin\Views\User\Index.cshtml.g.cs
+C:\Users\simar\source\repos\UniversityMs\UniversityMs\obj\Debug\netcoreapp3.1\Razor\Areas\UniversityMsAdmin\Views\User\Create.cshtml.g.cs
+C:\Users\simar\source\repos\UniversityMs\UniversityMs\obj\Debug\netcoreapp3.1\UniversityMs.csproj.AssemblyReference.cache

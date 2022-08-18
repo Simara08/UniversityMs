@@ -14,6 +14,10 @@ namespace UniversityMs.ViewModels
         [Required]
         public string FirstName { get; set; }
         [Required]
+        public string Adress { get; set; }
+        [Required]
+        public string PhoneNum { get; set; }
+        [Required]
         public string LastName { get; set; }
         [Required]
         [DataType(DataType.Password)]

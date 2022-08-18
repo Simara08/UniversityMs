@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -8,13 +9,17 @@ namespace UniversityMs.Models
 {
     public class AppUser: IdentityUser
     {
+        [Required]
         public string FirstName { get; set; }
-        public string LastName { get; set; } 
-        public string ProfileImage { get; set; }    
-        public string PhoneNum { get; set; }    
+        [Required]
+        public string LastName { get; set; }
+        public string ProfileImage { get; set; }
+        [Required]
+        public string PhoneNum { get; set; }
+        [Required]
         public string Adress { get; set; }    
         public DateTime DateofBirth { get; set; }  
-        public bool IsDaleted { get; set; }
+        public bool IsDeleted { get; set; }
         public int DocLogsId { get; set; }
         public int ClassId { get; set; }
         public int TranskriptId { get; set; }

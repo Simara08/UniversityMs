@@ -17,10 +17,20 @@
     <Compile Remove="Migrations\20220815144211_MyUniversity.Designer.cs" />
     <Compile Remove="Migrations\20220815154651_course.cs" />
     <Compile Remove="Migrations\20220815154651_course.Designer.cs" />
+    <Compile Remove="Migrations\20220815190331_MyUniversity.cs" />
+    <Compile Remove="Migrations\20220815190331_MyUniversity.Designer.cs" />
     <Compile Remove="Migrations\20220815200743_DocLogs.cs" />
     <Compile Remove="Migrations\20220815200743_DocLogs.Designer.cs" />
     <Compile Remove="Migrations\20220815201417_DocLogs.cs" />
     <Compile Remove="Migrations\20220815201417_DocLogs.Designer.cs" />
+    <Compile Remove="Migrations\20220815204816_DocLogs.cs" />
+    <Compile Remove="Migrations\20220815204816_DocLogs.Designer.cs" />
+    <Compile Remove="Migrations\20220817100710_CreateMyUniversityTables.cs" />
+    <Compile Remove="Migrations\20220817100710_CreateMyUniversityTables.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Areas\UniversityMsAdmin\Views\User\Delete.cshtml" />
   </ItemGroup>
 
   <ItemGroup>

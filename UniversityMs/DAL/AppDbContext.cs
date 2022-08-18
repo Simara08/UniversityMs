@@ -8,7 +8,7 @@ using UniversityMs.Models;
 
 namespace UniversityMs.DAL
 {
-    public class AppDbContext: IdentityDbContext
+    public class AppDbContext: IdentityDbContext<AppUser>
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
@@ -67,6 +67,7 @@ namespace UniversityMs.DAL
         public DbSet<ResearchTopic> ResearchTopic { get; set; }
         public DbSet<Section> Section { get; set; }
         public DbSet<Seminar> Seminar { get; set; }
+        public DbSet<Semestr> Semestr { get; set; }
         public DbSet<SemOffering> SemOffering { get; set; }
         public DbSet<SemOffCourse> SemOffCourse { get; set; }
         public DbSet<Status> Status { get; set; }
@@ -76,5 +77,6 @@ namespace UniversityMs.DAL
         public DbSet<UserExam> UserExam { get; set; }
         public DbSet<UserQuiz> UserQuiz { get; set; }
         public DbSet<UserSectionCourseStruc> UserSectionCourseStruc { get; set; }
+        public DbSet<SectionCourseStruc> SectionCourseStruc { get; set; }
     }
 }

@@ -63,7 +63,6 @@ namespace UniversityMs.Areas.UniversityMsAdmin.Controllers
             return RedirectToAction("Index", "Home");
 
         }
-        [HttpPost]
         public IActionResult Login()
         {
             return View();
