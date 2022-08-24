@@ -1,0 +1,45 @@
+﻿@model IEnumerable<UniversityMs.Models.Course>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<div class="box-body" style="margin:80px;">
+    <a type="submit" asp-action="Create" class="btn btn-primary" style="margin-bottom:10px;">+Add Course</a>
+    <div class="table-responsive mb-0">
+        <table class="table no-border" style="color: rgb(165, 63, 255);">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Credits)
+                    </th>
+                    <th style="min-width: 170px">
+                        <span>Setttings</span>
+                    </th>
+                    <th style="min-width: 120px"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Credits)
+                        </td>
+                        <td>
+                            <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                            <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        </div>
+        </div>

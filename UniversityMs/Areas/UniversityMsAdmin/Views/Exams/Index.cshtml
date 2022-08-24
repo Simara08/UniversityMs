@@ -1,0 +1,61 @@
+﻿@model IEnumerable<UniversityMs.Models.Exam>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="box-body" style="margin:80px;">
+    <a type="submit" asp-action="Create" class="btn btn-primary" style="margin-bottom:10px;">+Add Exam</a>
+    <div class="table-responsive mb-0">
+        <table class="table no-border" style="color: rgb(165, 63, 255);">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.StartTime)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.EndTime)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Mark)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.IsDaleted)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Class)
+                    </th>
+                    <th style="min-width: 170px">
+                        <span>Setttings</span>
+                    </th>
+                    <th style="min-width: 120px"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.StartTime)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.EndTime)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Mark)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.IsDaleted)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Class.Id)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        </div>
+        </div>

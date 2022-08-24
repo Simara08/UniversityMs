@@ -1,0 +1,39 @@
+﻿@model UniversityMs.Models.Quiz
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="row" style="margin:80px;">
+    <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">+Add New Department</h4>
+                <form class="forms-sample" method="post" enctype="multipart/form-data">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            <label asp-for="StartTime" class="control-label">Start Time</label>
+                            <input asp-for="StartTime" class="form-control" />
+                            <span asp-validation-for="StartTime" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="EndTime" class="control-label">End Time</label>
+                            <input asp-for="EndTime" class="form-control" />
+                            <span asp-validation-for="EndTime" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Mark" class="control-label">Mark</label>
+                            <input asp-for="Mark" class="form-control" />
+                            <span asp-validation-for="Mark" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Create" class="btn btn-primary" />
+                        </div>
+                        <button type="submit" value="Create" class="btn btn-primary">+Add</button>
+                        <a class="btn btn-light" asp-action="Index">Cancel</a>
+                    </form>
+            </div>
+        </div>
+        </div>
+        </div>
+

@@ -1,0 +1,75 @@
+﻿@model IEnumerable<Faculty>
+@{
+    ViewData["Title"] = "Index";
+    int count = 1;
+}
+
+<div class="box-body" style="margin:80px;">
+    <a type="submit" asp-action="Create" class="btn btn-primary" style="margin-bottom:10px;">+Add Faculty</a>
+    <div class="table-responsive mb-0">
+        <table class="table no-border" style="color: rgb(165, 63, 255);">
+            <thead>
+                <tr class="text-uppercase bg-lightest">
+                    <th style="min-width: 250px">
+                        #
+                    </th>
+                    <th style="min-width: 50px">
+                        <span>Image</span>
+                    </th>
+                    <th style="min-width: 170px">
+                        <span>Name</span>
+                    </th>
+                    <th style="min-width: 170px">
+                        <span>Description</span>
+                    </th>
+                    <th style="min-width: 170px">
+                        <span>Date</span>
+                    </th>
+                    <th style="min-width: 170px">
+                        <span>Setttings</span>
+                    </th>
+                    <th style="min-width: 120px"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var faculty in Model)
+                {
+                    <tr>
+                        <td>
+
+                            <span class=" fw-600 d-block fs-16" style="color: rgb(165, 63, 255);">
+                                @count
+                            </span>
+                        </td>
+                        <td>
+
+                            <span class="text-dark fw-600 d-block fs-16">
+                                <img src="~/assets/img/@faculty.Image" />
+                            </span>
+                        </td>
+                        <td>
+                            <span class="text-dark fw-600 d-block fs-16">
+                                @faculty.Name
+                            </span>
+                        </td>
+                        <td>
+                            <span class="text-dark fw-600 d-block fs-16">
+                                @faculty.Desc
+                            </span>
+                        </td>
+                        <td>
+                            <span class="text-dark fw-600 d-block fs-16">
+                                @faculty.Date
+                            </span>
+                        </td>
+                        <td>
+                            <a class="btn btn-warning" asp-action="Update" asp-route-id="@faculty.Id">Update</a>
+                            <a class="btn btn-danger" asp-action="Delete" asp-route-id="@faculty.Id">Delete</a>
+                        </td>
+                    </tr>
+                    count++;
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
