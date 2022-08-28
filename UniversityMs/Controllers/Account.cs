@@ -58,7 +58,7 @@ namespace UniversityMs.Areas.UniversityMsAdmin.Controllers
                 }
                 return View(model);
             }
-            await _userManager.AddToRoleAsync(NewUser, Role.RoleType.Admin.ToString());
+            await _userManager.AddToRoleAsync(NewUser, Role.RoleType.Student.ToString());
             await _signInManager.SignInAsync(NewUser, true);
             return RedirectToAction("Index", "Home");
 

@@ -27,6 +27,10 @@
     <Compile Remove="Migrations\20220815204816_DocLogs.Designer.cs" />
     <Compile Remove="Migrations\20220817100710_CreateMyUniversityTables.cs" />
     <Compile Remove="Migrations\20220817100710_CreateMyUniversityTables.Designer.cs" />
+    <Compile Remove="Migrations\20220817103848_CreateMyUniversityTables.cs" />
+    <Compile Remove="Migrations\20220817103848_CreateMyUniversityTables.Designer.cs" />
+    <Compile Remove="Migrations\20220818213653_Last.cs" />
+    <Compile Remove="Migrations\20220818213653_Last.Designer.cs" />
     <Compile Remove="Migrations\20220818224729_SemestrTable.cs" />
     <Compile Remove="Migrations\20220818224729_SemestrTable.Designer.cs" />
     <Compile Remove="Migrations\20220818224828_SemestrTable.cs" />
@@ -62,6 +66,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\StudentPanel\Data\" />
+    <Folder Include="Areas\StudentPanel\Models\" />
+    <Folder Include="Areas\TeacherPanel\Controllers\" />
+    <Folder Include="Areas\TeacherPanel\Data\" />
+    <Folder Include="Areas\TeacherPanel\Models\" />
+    <Folder Include="Areas\TeacherPanel\Views\" />
     <Folder Include="Areas\UniversityMsAdmin\Data\" />
   </ItemGroup>
 

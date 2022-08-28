@@ -10,10 +10,9 @@ namespace UniversityMs.Models
         public int Id { get; set; }
         public string Title { get; set; }
         public ICollection<Exam> Exam { get; set; }
-        public bool IsDaleted { get; set; }
+        public bool IsDeleted { get; set; }
         public  ICollection<ClassCourse> Coursecourse { get; set; }
         public  ICollection<Seminar> Seminar { get; set; }
         public  ICollection<TimeSchedule> TimeSchedule { get; set; }
-        public  ICollection<AppUser> AppUser { get; set; }
     }
 }

@@ -8,7 +8,7 @@ namespace UniversityMs.Models
     public class CourseQuiz
     {
         public int Id { get; set; }
-        public int CourseSectionId { get; set; }
+        public int SectionCourseStrucId { get; set; }
         public int QuizId { get; set; }
         public SectionCourseStruc SectionCourseStruc { get; set; }
         public Quiz Quiz { get; set; }

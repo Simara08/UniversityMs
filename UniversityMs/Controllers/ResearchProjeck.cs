@@ -17,9 +17,9 @@ namespace UniversityMs.Controllers
         }
         public IActionResult Index()
         {
-            ResearchProjeckVM rproject = new ResearchProjeckVM
+            ResearchProjectVM rproject = new ResearchProjectVM
             {
-                ResearchProjeck=_context.ResearchProjeck.ToList()
+                ResearchProject=_context.ResearchProject.ToList()
             };
             return View(rproject);
         }

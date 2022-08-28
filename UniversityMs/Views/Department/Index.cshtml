@@ -1,0 +1,92 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="pt-80 pb-130">
+    <div class="container">
+        <div class="row pt-120 pb-60">
+            <div class="col-12 col-lg-8 offset-lg-2">
+                <h1 class="m-0 pe-30" style="text-align: center;">Kafedralar</h1>
+            </div>
+        </div>
+        <!-- Isotope-->
+        <div class="isotope">
+            <div class="row isotope-grid gy-30" style="position: relative; height: 1585.15px;">
+                @foreach (var item in Model.Department)
+                {
+
+                    <div class=" isotope-item col-12 col-md-6 col-lg-4" data-filters="company"
+                         style="position: absolute; left: 0px; top: 528.385px;">
+                        <!-- Blog-->
+                        <div class="card card-blog  card-vertical card-hover-zoom card-blog-bordered rounded-4 overflow-hidden bg-white">
+                            <a class="card-img rounded-0" href="riyazianaliz-kafedra.html" data-img-height=""
+                               style="--img-height: 72%;">
+                                <img loading="lazy"
+                                     src="assets/img/@item.Image" alt="">
+                            </a>
+                            <div class="card-body py-40 px-50 pb-50">
+                                <a class="card-title h4"
+                                   href="riyazianaliz-kafedra.html">@item.Name</a>
+                                <!-- Button--><a class="btn btn-accent-1 btn-link btn-clean"
+                                                 href="riyazianaliz-kafedra.html" target="_self">Learn more</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+                <div class=" isotope-item col-12 col-md-6 col-lg-4" data-filters="company"
+                     style="position: absolute; left: 0px; top: 528.385px;">
+                    <!-- Blog-->
+                    <div class="card card-blog  card-vertical card-hover-zoom card-blog-bordered rounded-4 overflow-hidden bg-white">
+                        <a class="card-img rounded-0" href="diftenlik-kafedra.html" data-img-height=""
+                           style="--img-height: 72%;">
+                            <img loading="lazy" src="assets/img/Dif_tenlik.jpg"
+                                 alt="">
+                        </a>
+                        <div class="card-body py-40 px-50 pb-50">
+                            <a class="card-title h4"
+                               href="diftenlik-kafedra.html">Diferensial və inteqral tənliklər</a>
+                            <p class="card-text">
+                                Kafedra müdiri:R.ü.d., prof. Yaşar Topuş oğlu Mehrəliyev
+                                Mirzəyev
+                            </p>
+                            <!-- Button--><a class="btn btn-accent-1 btn-link btn-clean"
+                                             href="diftenlik-kafedra.html" target="_self">
+                                Learn
+                                more
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" isotope-item col-12 col-md-6 col-lg-4" data-filters="company"
+                     style="position: absolute; left: 0px; top: 528.385px;">
+                    <!-- Blog-->
+                    <d iv
+                       class="card card-blog  card-vertical card-hover-zoom card-blog-bordered rounded-4 overflow-hidden bg-white">
+                        <a class="card-img rounded-0" href="riyaziusullar-kafedrasi.html" data-img-height=""
+                           style="--img-height: 72%;">
+                            <img loading="lazy" src="assets/img/idareetme.jpg"
+                                 alt="">
+                        </a>
+                        <div class="card-body py-40 px-50 pb-50">
+                            <a class="card-title h4"
+                               href="riyaziusullar-kafedrasi.html">
+                                İdarəetmə nəzəriyyəsinin riyazi
+                                üsulları
+                            </a>
+                            <p class="card-text">
+                                Kafedra müdiri:F.r.e.d.,prof Hamlet Fərman oğlu Quliyev
+                                Mirzəyev
+                            </p>
+                            <!-- Button--><a class="btn btn-accent-1 btn-link btn-clean"
+                                             href="riyaziusullar-kafedrasi.html" target="_self">
+                                Learn
+                                more
+                            </a>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

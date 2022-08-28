@@ -71,10 +71,21 @@ namespace UniversityMs
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(
+                endpoints.MapAreaControllerRoute(
                 name: "areas",
-                pattern: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}"
+                areaName: "StudentPanel",
+                pattern: "StudentPanel/{controller=StudentCourses}/{action=Index}/{id?}"
+          );  
+                endpoints.MapAreaControllerRoute(
+                name: "areas",
+                 areaName: "UniversityMsAdmin",
+                pattern: "UniversityMsAdmin/{controller=Dashboard}/{action=Index}/{id?}"
           );
+                endpoints.MapAreaControllerRoute(
+              name: "areas",
+               areaName: "TeacherPanel",
+              pattern: "TeacherPanel/{controller=Dashboard}/{action=Index}/{id?}"
+        );
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");

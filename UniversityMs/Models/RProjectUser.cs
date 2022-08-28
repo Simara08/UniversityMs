@@ -11,6 +11,6 @@ namespace UniversityMs.Models
         public int UserId { get; set; }
         public int RProjectId { get; set; }
         public AppUser User { get; set; }
-        public ResearchProjeck ResearchProjeck { get; set; }
+        public ResearchProject ResearchProjeck { get; set; }
     }
 }

@@ -9,6 +9,5 @@ namespace UniversityMs.Models
     {
         public int Id { get; set; }
         public DateTime Date { get; set; }
-        public AppUser User { get; set; }
     }
 }

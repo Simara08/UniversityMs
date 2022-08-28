@@ -9,7 +9,7 @@ namespace UniversityMs.Models
     {
         public int Id { get; set; }
         public int FacultyId { get; set; }
-        public int CourseSectionId { get; set; }
+        public int SectionCourseStrucId { get; set; }
         public Faculty Faculty { get; set; }
         public SectionCourseStruc SectionCourseStruc { get; set; }
     }

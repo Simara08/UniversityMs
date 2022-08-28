@@ -33,9 +33,11 @@ namespace UniversityMs.DAL
         public DbSet<Elmishurapage> Elmishuralar { get; set; }
         public DbSet<Newspage> Newspages { get; set; }
         public DbSet<Aboutpage> Aboutpages { get; set; }
+        public DbSet<SeminarUser> SeminarUser { get; set; }
         public DbSet<Googlemap> Maps { get; set; }
         public DbSet<Settings> Settings { get; set; }
         public DbSet<Assigment> Assigment { get; set; }
+        public DbSet<ResearchProject> ResearchProject { get; set; }
         public DbSet<AssigmentCourseSection> AssigmentCourseSection { get; set; }
         public DbSet<AssigmentUser> AssigmentUser { get; set; }
         public DbSet<Assigment> Assigments { get; set; }
@@ -63,7 +65,6 @@ namespace UniversityMs.DAL
         public DbSet<Quiz> Quiz { get; set; }
         public DbSet<Paper> Paper { get; set; }
         public DbSet<UniProgram> Program { get; set; }
-        public DbSet<ResearchProjeck> ResearchProjeck { get; set; }
         public DbSet<ResearchTopic> ResearchTopic { get; set; }
         public DbSet<Section> Section { get; set; }
         public DbSet<Seminar> Seminar { get; set; }

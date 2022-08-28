@@ -185,18 +185,12 @@ namespace UniversityMs.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("ClassId")
-                        .HasColumnType("int");
-
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("DateofBirth")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("DocLogsId")
-                        .HasColumnType("int");
+                    b.Property<string>("DateofBirth")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(256)")
@@ -249,9 +243,6 @@ namespace UniversityMs.Migrations
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("TranskriptId")
-                        .HasColumnType("int");
-
                     b.Property<bool>("TwoFactorEnabled")
                         .HasColumnType("bit");
 
@@ -261,11 +252,6 @@ namespace UniversityMs.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ClassId");
-
-                    b.HasIndex("DocLogsId")
-                        .IsUnique();
-
                     b.HasIndex("NormalizedEmail")
                         .HasName("EmailIndex");
 
@@ -273,9 +259,6 @@ namespace UniversityMs.Migrations
                         .IsUnique()
                         .HasName("UserNameIndex")
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
-
-                    b.HasIndex("TranskriptId")
-                        .IsUnique();
 
                     b.ToTable("AspNetUsers");
                 });
@@ -367,7 +350,7 @@ namespace UniversityMs.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<bool>("IsDaleted")
+                    b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
                     b.Property<string>("Title")
@@ -431,10 +414,7 @@ namespace UniversityMs.Migrations
                     b.Property<int>("CourseId")
                         .HasColumnType("int");
 
-                    b.Property<int>("DepId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("DepartmentId")
+                    b.Property<int>("DepartmentId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -453,13 +433,10 @@ namespace UniversityMs.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CourseSectionId")
-                        .HasColumnType("int");
-
                     b.Property<int>("QuizId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("SectionCourseStrucId")
+                    b.Property<int>("SectionCourseStrucId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -533,17 +510,12 @@ namespace UniversityMs.Migrations
                     b.Property<int>("DepId")
                         .HasColumnType("int");
 
-                    b.Property<int>("UniProgramId")
-                        .HasColumnType("int");
-
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("DepId");
-
-                    b.HasIndex("UniProgramId");
 
                     b.HasIndex("UserId");
 
@@ -590,16 +562,11 @@ namespace UniversityMs.Migrations
                     b.Property<int>("FacultyId")
                         .HasColumnType("int");
 
-                    b.Property<int>("UniProgramId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("DepartmentId");
 
                     b.HasIndex("FacultyId");
-
-                    b.HasIndex("UniProgramId");
 
                     b.ToTable("Depfaculty");
                 });
@@ -775,13 +742,10 @@ namespace UniversityMs.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CourseSectionId")
-                        .HasColumnType("int");
-
                     b.Property<int>("ExamId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("SectionCourseStrucId")
+                    b.Property<int>("SectionCourseStrucId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -822,8 +786,8 @@ namespace UniversityMs.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("datetime2");
+                    b.Property<string>("Date")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Desc")
                         .HasColumnType("nvarchar(max)");
@@ -849,13 +813,10 @@ namespace UniversityMs.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CourseSectionId")
-                        .HasColumnType("int");
-
                     b.Property<int>("FacultyId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("SectionCourseStrucId")
+                    b.Property<int>("SectionCourseStrucId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -1286,7 +1247,7 @@ namespace UniversityMs.Migrations
                     b.ToTable("Rektorlar");
                 });
 
-            modelBuilder.Entity("UniversityMs.Models.ResearchProjeck", b =>
+            modelBuilder.Entity("UniversityMs.Models.ResearchProject", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -1320,7 +1281,7 @@ namespace UniversityMs.Migrations
 
                     b.HasIndex("FacultyId");
 
-                    b.ToTable("ResearchProjeck");
+                    b.ToTable("ResearchProject");
                 });
 
             modelBuilder.Entity("UniversityMs.Models.ResearchTopic", b =>
@@ -1330,13 +1291,13 @@ namespace UniversityMs.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Desc")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<bool>("IsDaleted")
                         .HasColumnType("bit");
 
-                    b.Property<int>("Mark")
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TotalMark")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -1434,18 +1395,12 @@ namespace UniversityMs.Migrations
                     b.Property<DateTime>("StartTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("UniProgramId")
-                        .HasColumnType("int");
-
                     b.Property<int>("Year")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("DepartmentId")
-                        .IsUnique();
-
-                    b.HasIndex("UniProgramId")
                         .IsUnique();
 
                     b.ToTable("SemOffering");
@@ -1485,7 +1440,7 @@ namespace UniversityMs.Migrations
                     b.Property<int>("ClassId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("Date")
+                    b.Property<DateTime>("EndTime")
                         .HasColumnType("datetime2");
 
                     b.Property<bool>("IsDaleted")
@@ -1493,6 +1448,9 @@ namespace UniversityMs.Migrations
 
                     b.Property<int>("Mark")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("StartTime")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
@@ -1510,6 +1468,31 @@ namespace UniversityMs.Migrations
                     b.HasIndex("UserId1");
 
                     b.ToTable("Seminar");
+                });
+
+            modelBuilder.Entity("UniversityMs.Models.SeminarUser", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("SeminarId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId1")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SeminarId");
+
+                    b.HasIndex("UserId1");
+
+                    b.ToTable("SeminarUser");
                 });
 
             modelBuilder.Entity("UniversityMs.Models.Settings", b =>
@@ -1615,17 +1598,11 @@ namespace UniversityMs.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("EndTime")
-                        .HasColumnType("datetime2");
-
                     b.Property<bool>("IsDaleted")
                         .HasColumnType("bit");
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("StartTime")
-                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
@@ -1638,9 +1615,6 @@ namespace UniversityMs.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<bool>("IsDaleted")
-                        .HasColumnType("bit");
 
                     b.Property<string>("Type")
                         .HasColumnType("nvarchar(max)");
@@ -1821,27 +1795,6 @@ namespace UniversityMs.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("UniversityMs.Models.AppUser", b =>
-                {
-                    b.HasOne("UniversityMs.Models.Class", "Class")
-                        .WithMany("AppUser")
-                        .HasForeignKey("ClassId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("UniversityMs.Models.DocLogs", "DocLogs")
-                        .WithOne("User")
-                        .HasForeignKey("UniversityMs.Models.AppUser", "DocLogsId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("UniversityMs.Models.DocTranskript", "Transkript")
-                        .WithOne("User")
-                        .HasForeignKey("UniversityMs.Models.AppUser", "TranskriptId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("UniversityMs.Models.AssigmentCourseSection", b =>
                 {
                     b.HasOne("UniversityMs.Models.Assigment", "Assigment")
@@ -1896,7 +1849,8 @@ namespace UniversityMs.Migrations
                     b.HasOne("UniversityMs.Models.Department", "Department")
                         .WithMany("CourseDep")
                         .HasForeignKey("DepartmentId")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("UniversityMs.Models.CourseQuiz", b =>
@@ -1910,7 +1864,8 @@ namespace UniversityMs.Migrations
                     b.HasOne("UniversityMs.Models.SectionCourseStruc", "SectionCourseStruc")
                         .WithMany("CourseQuiz")
                         .HasForeignKey("SectionCourseStrucId")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("UniversityMs.Models.CourseSturucture", b =>
@@ -1945,12 +1900,6 @@ namespace UniversityMs.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("UniversityMs.Models.UniProgram", "UniProgram")
-                        .WithMany("DepUsers")
-                        .HasForeignKey("UniProgramId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
                     b.HasOne("UniversityMs.Models.AppUser", "User")
                         .WithMany("DepUsers")
                         .HasForeignKey("UserId")
@@ -1968,12 +1917,6 @@ namespace UniversityMs.Migrations
                     b.HasOne("UniversityMs.Models.Faculty", "Faculty")
                         .WithMany("Depfaculty")
                         .HasForeignKey("FacultyId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("UniversityMs.Models.UniProgram", "UniProgram")
-                        .WithMany("Depafulty")
-                        .HasForeignKey("UniProgramId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
                 });
@@ -2035,7 +1978,8 @@ namespace UniversityMs.Migrations
                     b.HasOne("UniversityMs.Models.SectionCourseStruc", "SectionCourseStruc")
                         .WithMany("ExamCourseStruc")
                         .HasForeignKey("SectionCourseStrucId")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("UniversityMs.Models.ExamPaper", b =>
@@ -2064,7 +2008,8 @@ namespace UniversityMs.Migrations
                     b.HasOne("UniversityMs.Models.SectionCourseStruc", "SectionCourseStruc")
                         .WithMany("FacultyCourseStruc")
                         .HasForeignKey("SectionCourseStrucId")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("UniversityMs.Models.Grade", b =>
@@ -2121,7 +2066,7 @@ namespace UniversityMs.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("UniversityMs.Models.ResearchProjeck", "RProject")
+                    b.HasOne("UniversityMs.Models.ResearchProject", "RProject")
                         .WithMany("RProjectPaper")
                         .HasForeignKey("RProjectId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -2130,7 +2075,7 @@ namespace UniversityMs.Migrations
 
             modelBuilder.Entity("UniversityMs.Models.RProjectUser", b =>
                 {
-                    b.HasOne("UniversityMs.Models.ResearchProjeck", "ResearchProjeck")
+                    b.HasOne("UniversityMs.Models.ResearchProject", "ResearchProjeck")
                         .WithMany("RProjectUser")
                         .HasForeignKey("ResearchProjeckId")
                         .OnDelete(DeleteBehavior.Restrict);
@@ -2155,7 +2100,7 @@ namespace UniversityMs.Migrations
                         .OnDelete(DeleteBehavior.Restrict);
                 });
 
-            modelBuilder.Entity("UniversityMs.Models.ResearchProjeck", b =>
+            modelBuilder.Entity("UniversityMs.Models.ResearchProject", b =>
                 {
                     b.HasOne("UniversityMs.Models.SectionCourseStruc", "CourseSection")
                         .WithMany()
@@ -2216,12 +2161,6 @@ namespace UniversityMs.Migrations
                         .HasForeignKey("UniversityMs.Models.SemOffering", "DepartmentId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
-
-                    b.HasOne("UniversityMs.Models.UniProgram", "UniProgram")
-                        .WithOne("SemOffering")
-                        .HasForeignKey("UniversityMs.Models.SemOffering", "UniProgramId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("UniversityMs.Models.Semestr", b =>
@@ -2238,6 +2177,20 @@ namespace UniversityMs.Migrations
                     b.HasOne("UniversityMs.Models.Class", "Class")
                         .WithMany("Seminar")
                         .HasForeignKey("ClassId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("UniversityMs.Models.AppUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId1")
+                        .OnDelete(DeleteBehavior.Restrict);
+                });
+
+            modelBuilder.Entity("UniversityMs.Models.SeminarUser", b =>
+                {
+                    b.HasOne("UniversityMs.Models.Seminar", "Seminar")
+                        .WithMany()
+                        .HasForeignKey("SeminarId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 

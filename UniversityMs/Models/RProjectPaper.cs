@@ -11,6 +11,6 @@ namespace UniversityMs.Models
         public int PaperId { get; set; }
         public int RProjectId { get; set; }
         public Paper Paper{ get; set; }
-        public ResearchProjeck RProject { get; set; }
+        public ResearchProject RProject { get; set; }
     }
 }

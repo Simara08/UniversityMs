@@ -42,7 +42,8 @@ namespace UniversityMs.Areas.UniversityMsAdmin.Controllers
 
         public IActionResult Index()
         {
-            var user = _context.Users.Where(user=> !user.IsDeleted).ToList();
+            var user = _context.Users.Where(user => !user.IsDeleted).ToList();
+            //
             return View(user);
         }
         public async Task<IActionResult> Delete(string Id)
@@ -69,7 +70,7 @@ namespace UniversityMs.Areas.UniversityMsAdmin.Controllers
         [AutoValidateAntiforgeryToken]
         public async Task<IActionResult> Create(CreateUserViewModel user)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 return View(user);
             }
@@ -80,7 +81,8 @@ namespace UniversityMs.Areas.UniversityMsAdmin.Controllers
                 Adress = user.Adress,
                 FirstName = user.FirstName,
                 PhoneNum = user.PhoneNum,
-                UserName=user.Email
+                UserName=user.Email,
+                DateofBirth = user.DateofBirth
                 
             };
             var IdentityResult = await _userManager.CreateAsync(newuser, user.Password);
@@ -93,7 +95,8 @@ namespace UniversityMs.Areas.UniversityMsAdmin.Controllers
                   ModelState.AddModelError(string.Empty, "Invalid Register Attempt");
                 return View(user);
             };
-            await _userManager.AddToRoleAsync(newuser, Role.RoleType.Admin.ToString());
+            //await _userManager.AddToRoleAsync(newuser, Role.RoleType.Student.ToString());
+            await _signInManager.SignInAsync(newuser, true);
             return RedirectToAction("Index" , "User");
         }
      

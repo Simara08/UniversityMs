@@ -12,7 +12,7 @@ namespace UniversityMs.Models
         public int Credits { get; set; }
         public bool IsDaleted { get; set; }
         public CourseSturucture CourseSturucture { get; set; }
-        public  ICollection<CourseDep> CourseDep { get; set; }
+        public  List<CourseDep> CourseDep { get; set; }
         public  ICollection<ClassCourse> Coursecourse { get; set; }
         public ICollection<SemOffCourse> SemOffCourse { get; set; }
         public ICollection<CourseTopic> CourseTopic { get; set; }

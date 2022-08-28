@@ -12,7 +12,6 @@ namespace UniversityMs.Models
         public int TranskriptId { get; set; }
         public int ArayishId { get; set; }
         public int ErizeId { get; set; }
-        public AppUser User { get; set; }
         public DocTranskript Transkript { get; set; }
         public DocArayish Arayish { get; set; }
         public DocErize Erize { get; set; }

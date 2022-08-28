@@ -18,14 +18,8 @@ namespace UniversityMs.Models
         public string PhoneNum { get; set; }
         [Required]
         public string Adress { get; set; }    
-        public DateTime DateofBirth { get; set; }  
+        public string DateofBirth { get; set; }  
         public bool IsDeleted { get; set; }
-        public int DocLogsId { get; set; }
-        public int ClassId { get; set; }
-        public int TranskriptId { get; set; }
-        public DocLogs DocLogs { get; set; }
-        public Class Class { get; set; }
-        public DocTranskript Transkript { get; set; }
         public ICollection<UserExam> UserExam { get; set; }
         public ICollection<DepUser> DepUsers { get; set; }
         public ICollection<UserSectionCourseStruc> UserSectionCourseStruc { get; set; }
