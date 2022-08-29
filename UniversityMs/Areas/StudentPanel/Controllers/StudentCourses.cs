@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ using UniversityMs.ViewModels;
 namespace UniversityMs.Areas.StudentPanel.Controllers
 {
     [Area("StudentPanel")]
+    //[Authorize]
     public class StudentCourses : Controller
     {
         public AppDbContext _context { get; set; }

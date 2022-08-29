@@ -15,7 +15,7 @@ using Prorektorpage = UniversityMs.Models.Prorektorpage;
 
 namespace UniversityMs.Areas.UniversityMsAdmin.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Area("UniversityMsAdmin")]
     public class ProrektorpageController : Controller
     {

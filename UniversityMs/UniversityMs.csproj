@@ -37,6 +37,10 @@
     <Compile Remove="Migrations\20220818224828_SemestrTable.Designer.cs" />
     <Compile Remove="Migrations\20220818224939_First.cs" />
     <Compile Remove="Migrations\20220818224939_First.Designer.cs" />
+    <Compile Remove="Migrations\20220829103811_AppUserClass.cs" />
+    <Compile Remove="Migrations\20220829103811_AppUserClass.Designer.cs" />
+    <Compile Remove="Migrations\20220829104407_AppUserClass.cs" />
+    <Compile Remove="Migrations\20220829104407_AppUserClass.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

@@ -9,6 +9,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using UniversityMs.Models;
 using UniversityMs.ViewModels;
+using Microsoft.EntityFrameworkCore;
 
 namespace UniversityMs.Areas.UniversityMsAdmin.Controllers
 {
@@ -71,30 +72,28 @@ namespace UniversityMs.Areas.UniversityMsAdmin.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> Login(LoginVM model)
         {
-            AppUser DbUser = await _userManager.FindByEmailAsync(model.Email);
-            if (DbUser == null)
-            {
-                ModelState.AddModelError("", "Email or password is wrong!");
-                return View(model);
-            }
-            AppUser newModel = new AppUser
-            {
-                Email = model.Email
-            };
-            var signInResult =
-                 await _signInManager.PasswordSignInAsync(DbUser.UserName, model.Password, model.isPersistent, lockoutOnFailure: true);
-            if (signInResult.IsLockedOut)
-            {
-                ModelState.AddModelError("", "Prease try again later!");
-                return View(model);
-            }
-            if (!signInResult.Succeeded)
-            {
-                ModelState.AddModelError("", "Email or password is wrong!");
-                return View(model);
+            AppUser user = await _userManager.Users.FirstOrDefaultAsync(x => !x.IsAdmin && x.UserName == model.Email);
 
+
+            if (user == null)
+            {
+                ModelState.AddModelError("", "UserName or Password is not correct!");
+                return View();
             }
-            return RedirectToAction("Index", "Home");
+
+
+            var result = await _signInManager.CheckPasswordSignInAsync(user, model.Password,false);
+
+            if (!result.Succeeded)
+            {
+                ModelState.AddModelError("", "UserName or Password is not correct!");
+                return View();
+            }
+
+            if (!ModelState.IsValid)
+                return View();
+
+            return RedirectToAction( "Index" , "Home");
         }
         public async Task<IActionResult> Logout()
         {

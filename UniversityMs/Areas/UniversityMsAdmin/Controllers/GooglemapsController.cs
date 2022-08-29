@@ -11,7 +11,7 @@ using UniversityMs.Models;
 
 namespace UniversityMs.Areas.UniversityMsAdmin.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Area("UniversityMsAdmin")]
     public class GooglemapsController : Controller
     {

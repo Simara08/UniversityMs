@@ -15,7 +15,7 @@ using RektorPage = UniversityMs.Models.RektorPage;
 
 namespace UniversityMs.Areas.UniversityMsAdmin.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Area("UniversityMsAdmin")]
     public class RektorPageController : Controller
     {

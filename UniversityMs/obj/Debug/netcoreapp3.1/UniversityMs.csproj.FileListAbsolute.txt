@@ -275,3 +275,5 @@ C:\Users\simar\source\repos\UniversityMs\UniversityMs\obj\Debug\netcoreapp3.1\Ra
 C:\Users\simar\source\repos\UniversityMs\UniversityMs\obj\Debug\netcoreapp3.1\Razor\Views\Faculty\Index.cshtml.g.cs
 C:\Users\simar\source\repos\UniversityMs\UniversityMs\obj\Debug\netcoreapp3.1\Razor\Views\Department\Index.cshtml.g.cs
 C:\Users\simar\source\repos\UniversityMs\UniversityMs\obj\Debug\netcoreapp3.1\Razor\Areas\StudentPanel\Views\StudentQuiz\Index.cshtml.g.cs
+C:\Users\simar\source\repos\UniversityMs\UniversityMs\obj\Debug\netcoreapp3.1\UniversityMs.csproj.AssemblyReference.cache
+C:\Users\simar\source\repos\UniversityMs\UniversityMs\obj\Debug\netcoreapp3.1\Razor\Areas\StudentPanel\Views\StudentAccount\Login.cshtml.g.cs

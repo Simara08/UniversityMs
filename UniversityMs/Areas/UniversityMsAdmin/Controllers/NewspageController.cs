@@ -15,7 +15,7 @@ using Newspage = UniversityMs.Models.Newspage;
 
 namespace UniversityMs.Areas.UniversityMsAdmin.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Area("UniversityMsAdmin")]
         public class NewspageController : Controller
         {

@@ -11,6 +11,7 @@ namespace UniversityMs.Models
     {
         [Required]
         public string FirstName { get; set; }
+        public bool IsAdmin { get; set; }
         [Required]
         public string LastName { get; set; }
         public string ProfileImage { get; set; }
@@ -20,6 +21,8 @@ namespace UniversityMs.Models
         public string Adress { get; set; }    
         public string DateofBirth { get; set; }  
         public bool IsDeleted { get; set; }
+        //public int ClassesId { get; set; }
+        //public Class Classes { get; set; }
         public ICollection<UserExam> UserExam { get; set; }
         public ICollection<DepUser> DepUsers { get; set; }
         public ICollection<UserSectionCourseStruc> UserSectionCourseStruc { get; set; }

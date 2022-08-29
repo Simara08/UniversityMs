@@ -15,7 +15,7 @@ using Elmishurapage = UniversityMs.Models.Elmishurapage;
 
 namespace UniversityMs.Areas.UniversityMsAdmin.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Area("UniversityMsAdmin")]
     public class ElmishurapageController : Controller
     {
